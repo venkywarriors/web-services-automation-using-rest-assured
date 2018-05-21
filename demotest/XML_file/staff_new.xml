@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<company>
+	<staff id="1001">
+		<firstname>yong</firstname>
+		<lastname>mook kim</lastname>
+		<nickname>mkyong</nickname>
+		<salary>100000</salary>
+	</staff>
+	
+<country>
+		<country  langText="हिन्दी" orignalLang="Hindi" />
+		<country  langText="বাংলা" orignalLang="Bengali" />
+		<country  langText="తెలుగు" orignalLang="Telugu" />
+		<country  langText="मराठी" orignalLang="Marathi" />
+		<country  langText="தமிழ்" orignalLang="Tamil" />
+		<country langText="Indonesia" orignalLang="Gujarati" />
+		<country  langText="മലയാളം" orignalLang="Malayalam" />
+    </country>	
+</company>
