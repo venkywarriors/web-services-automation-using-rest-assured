@@ -1,14 +1,14 @@
 package com.JSON.demotest;
-
+/*
+ * @author venkateshwara.d
+ *
+ */
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-/**
- * @author venkateshwara.d
- *
- */
+
 public class PaginationInSelenium {
 	public static String path = System.getProperty("user.dir");
 	public static WebDriver driver;
