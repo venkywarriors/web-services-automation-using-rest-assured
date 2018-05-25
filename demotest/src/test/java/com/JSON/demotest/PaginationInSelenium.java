@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.JSON.demotest;
 
 import org.openqa.selenium.chrome.ChromeDriver;
