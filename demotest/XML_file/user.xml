@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Users>
+    <User>
+        <UserId>12345</UserId>
+        <Name>
+            <FirstName>Maden</FirstName>
+            <MiddleName>Over</MiddleName>
+            <Surname>Gulliver</Surname>
+        </Name>
+        <Address>
+            <FirstLineOfAddress>Oxford Street</FirstLineOfAddress>
+            <SecondLineOfAddress></SecondLineOfAddress>
+            <City>London</City>
+            <County>Middlesex</County>
+            <Country>United Kingdom</Country>
+        </Address>
+        <Sex>Male</Sex>
+        <DateOfBirth>01/02/1967</DateOfBirth>
+        <Email></Email>
+    </User>
+    <User>
+        <UserId>56789</UserId>
+        <Name>
+            <FirstName>Tom</FirstName>
+            <MiddleName>Cruise</MiddleName>
+            <Surname>Kidman</Surname>
+        </Name>
+        <Address>
+            <FirstLineOfAddress>Reagent Street</FirstLineOfAddress>
+            <SecondLineOfAddress></SecondLineOfAddress>
+            <City>New York</City>
+            <County></County>
+            <Country>United States</Country>
+        </Address>
+        <Sex>Female</Sex>
+        <DateOfBirth>02/03/1978</DateOfBirth>
+        <Email></Email>
+    </User>
+    <User>
+        <UserId>72638</UserId>
+        <Name>
+            <FirstName>Amitabh</FirstName>
+            <MiddleName></MiddleName>
+            <Surname>Bachchan</Surname>
+        </Name>
+        <Address>
+            <FirstLineOfAddress>Panama Street</FirstLineOfAddress>
+            <SecondLineOfAddress></SecondLineOfAddress>
+            <City>Mumbai</City>
+            <County></County>
+            <Country>India</Country>
+        </Address>
+        <Sex>Male</Sex>
+        <DateOfBirth>05/04/1999</DateOfBirth>
+        <Email>amitabh.bachchan@asv.com</Email>
+    </User>
+</Users>
