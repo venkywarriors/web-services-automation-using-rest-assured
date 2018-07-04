@@ -29,7 +29,7 @@ public class ExampleXMLFollowingSibling {
     public void execute() {
         try {
             builder = builderFactory.newDocumentBuilder();
-            Document document = builder.parse(this.getClass().getResourceAsStream("user.xml"));
+            Document document = builder.parse(this.getClass().getResourceAsStream("\\XML_file\\user.xml"));
             XPath xPath =  XPathFactory.newInstance().newXPath();
             String expression = "//following-sibling::User[position()=3]";
 
