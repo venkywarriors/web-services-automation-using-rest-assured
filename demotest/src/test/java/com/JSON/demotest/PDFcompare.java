@@ -21,13 +21,13 @@ public class PDFcompare {
 		
 		Desktop desktop = Desktop.getDesktop();
 
-		String file1 = ProjectDir + "\\PDF\\Doc1.pdf";
+		String file1 = ProjectDir + "\\Property_file\\Doc1.pdf";
 		
-		String file2 = ProjectDir + "\\PDF\\Doc2.pdf";
+		String file2 = ProjectDir + "\\Property_file\\Doc2.pdf";
 		
-		String diffOutput = ProjectDir + "\\PDF\\resultPDF";
+		String diffOutput = ProjectDir + "\\Property_file\\resultPDF";
 
-		File file = new File(ProjectDir + "\\PDF\\resultPDF.pdf");
+		File file = new File(ProjectDir + "\\Property_file\\resultPDF.pdf");
 		
 		File file11 = new File(file1);
 		
