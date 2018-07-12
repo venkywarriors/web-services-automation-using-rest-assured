@@ -1,6 +1,17 @@
 import java.util.ArrayList;
 public class CompareArrayList {
 
+	public static boolean hasDuplicatesInArrayList(ArrayList<?> list) {
+	    for (int i = 0; i < list.size(); i++) {
+	        for (int j = i + 1; j < list.size(); j++) {
+	        if (list.get(i) == list.get(j)) {
+	            return true;
+	        }
+	        }
+	    }
+	    return false;
+	    }
+	
 	static boolean comparewithorder(ArrayList<?> a, ArrayList<?> b) {
 		  if (a == null && b == null) return true;
 
