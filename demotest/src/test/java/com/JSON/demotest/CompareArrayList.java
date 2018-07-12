@@ -2,10 +2,24 @@ import java.util.ArrayList;
 public class CompareArrayList {
 
 	static boolean comparewithorder(ArrayList<?> a, ArrayList<?> b) {
+		  if (a == null && b == null) return true;
+
+
+		    if ((a == null && b!= null) || (a != null && b== null) || (a.size() != b.size()))
+		    {
+		        return false;
+		    }
 		return a.equals(b);
 	}
 
 	static boolean comparewithoutorder(ArrayList<?> a, ArrayList<?> b) {
+		  if (a == null && b == null) return true;
+
+
+		    if ((a == null && b!= null) || (a != null && b== null) || (a.size() != b.size()))
+		    {
+		        return false;
+		    }
 		return a.containsAll(b);
 	}
 
