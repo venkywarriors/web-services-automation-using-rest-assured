@@ -16,7 +16,20 @@ public class PDFcompare {
 	 */
 	@SuppressWarnings("rawtypes")
 	public static void main(String[] args) throws IOException {
+		System.setProperty("sun.java2d.cmm", "sun.java2d.cmm.kcms.KcmsServiceProvider");
 
+		String[] loggers = { "org.apache.pdfbox.util.PDFStreamEngine", "org.apache.pdfbox.pdmodel.font.PDSimpleFont",
+				"org.apache.pdfbox.pdmodel.font.PDFont", "org.apache.pdfbox.pdmodel.font.FontManager",
+				"org.apache.pdfbox.io.ScratchFileBuffer", "org.apache.fontbox.ttf.PostScriptTable",
+				"org.apache.fontbox.ttf.GlyphSubstitutionTable", "org.apache.fontbox.ttf.GlyphSubstitutionTable",
+				"org.apache.pdfbox.pdmodel.font.PDCIDFontType2", "org.apache.fontbox.util.autodetect.FontFileFinder",
+				"org.apache.pdfbox.pdmodel.font.FileSystemFontProvider",
+				"org.apache.pdfbox.pdfparser.PDFObjectStreamParser" };
+
+		for (String logger : loggers) {
+			org.apache.log4j.Logger logpdfengine = org.apache.log4j.Logger.getLogger(logger);
+			logpdfengine.setLevel(org.apache.log4j.Level.OFF);
+		}
 		String ProjectDir = System.getProperty("user.dir");
 		
 		Desktop desktop = Desktop.getDesktop();
