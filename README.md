@@ -4,3 +4,9 @@ solution to javax.net.ssl.SSLHandshakeException: sun.security.validator.Validato
 
 ###### **RestAssured.useRelaxedHTTPSValidation();**      //disable usual https verification aswell 
 
+[Basics](https://www.hascode.com/2011/10/testing-restful-web-services-made-easy-using-the-rest-assured-framework/)
+
+[Example](https://medium.com/gradeup/rest-api-testing-using-rest-assured-56a6cf772ca3)
+
+[rest-assured offical](https://github.com/rest-assured/rest-assured/wiki/usage)
+
