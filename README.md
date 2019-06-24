@@ -10,3 +10,6 @@ solution to javax.net.ssl.SSLHandshakeException: sun.security.validator.Validato
 
 [rest-assured offical](https://github.com/rest-assured/rest-assured/wiki/usage)
 
+Sample programs :
+[https://github.com/rest-assured/rest-assured/tree/master/examples/rest-assured-itest-java/src/test/java/io/restassured/itest/java](https://github.com/rest-assured/rest-assured/tree/master/examples/rest-assured-itest-java/src/test/java/io/restassured/itest/java)
+
