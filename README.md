@@ -1,4 +1,4 @@
-# Web Services
+![Rest Assured API Testing Framework](https://1.bp.blogspot.com/-AIE764EqgyQ/XOjijRSSnII/AAAAAAAArmA/u3QjS9N6-no_zo7YASd8IFh1hom0kikQQCLcBGAs/s1600/framework%2Blogo.JPG)
 
 How to resolve javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: 
 
