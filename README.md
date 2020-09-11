@@ -1,6 +1,6 @@
-# web services
+# Web Services
 
-solution to javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: 
+How to resolve javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: 
 
 ###### **RestAssured.useRelaxedHTTPSValidation();**      //disable usual https verification aswell 
 
