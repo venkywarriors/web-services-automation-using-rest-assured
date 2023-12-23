@@ -164,3 +164,27 @@ public class JuneauSerializationAndDeserializationExample {
     }
 }
 ```
+### :dart:  Extract and print the response time in seconds
+```
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+
+public class ApiRequestExample {
+
+    public static void main(String[] args) {
+        // Replace with your API endpoint
+        String apiUrl = "https://api.example.com/data";
+
+        // Make API request and measure response time
+        Response response = RestAssured.get(apiUrl);
+
+        // Extract and print the response time in seconds
+        long responseTimeInMillis = response.time();
+        double responseTimeInSeconds = responseTimeInMillis / 1000.0;
+        System.out.println("API Response Time: " + responseTimeInSeconds + " seconds");
+
+        // Process the API response as needed
+        System.out.println("API Response: " + response.getBody().asString());
+    }
+}
+```
