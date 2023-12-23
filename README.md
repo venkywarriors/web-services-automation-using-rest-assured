@@ -188,3 +188,143 @@ public class ApiRequestExample {
     }
 }
 ```
+### :dart: Authentication
+```
+package org.example;
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import io.restassured.response.ResponseBody;
+import io.restassured.specification.RequestSpecification;
+
+public class BasicAuth {
+
+    @Test
+    public void getData() {
+	//basic authentication scheme
+       RequestSpecification httpRequest = RestAssured.given().auth().basic("postman", "password");
+
+  	//Using the preemptive directive of basic auth to send credentials to the server
+        RequestSpecification httpRequest = RestAssured.given().auth().preemptive().basic("postman", "password");
+	//Digest Authentication
+        RequestSpecification httpRequest = RestAssured.given().auth().digest().("postman", "password");
+	//Form Authentication
+	RequestSpecification httpRequest = RestAssured.given().auth().form().("postman", "password");
+	//OAuth 2.0
+	given().auth().oauth2("Access token").get("your end point URL")
+
+        Response res = httpRequest.get("https://postman-echo.com/basic-auth");
+       
+       ResponseBody body = res.body();
+       //Converting the response body to string
+       String rbdy = body.asString();
+       System.out.println("Data from the GET API- "+rbdy);
+    }
+}
+```
+### :dart: DeSerialize JSON Array to List of String using JSONPath
+```
+@Test
+public void JsonPathUsage() throws MalformedURLException
+{
+	RestAssured.baseURI = "https://restapi.demoqa.com/utilities/books/getallbooks";
+	RequestSpecification httpRequest = RestAssured.given();
+	Response response = httpRequest.get("");
+
+	// First get the JsonPath object instance from the Response interface
+	JsonPath jsonPathEvaluator = response.jsonPath();
+
+	// Read all the books as a List of String. Each item in the list
+	// represent a book node in the REST service Response
+	List<String> allBooks = jsonPathEvaluator.getList("books.title");
+
+	// Iterate over the list and print individual book item
+	for(String book : allBooks)
+	{
+		System.out.println("Book: " + book);
+	}
+}
+```
+### :dart: To upload a file using RestAssured
+```
+import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
+import java.io.File;
+
+public class FileUploadExample {
+
+    public static void main(String[] args) {
+        // Replace with your API endpoint
+        String apiUrl = "https://api.example.com/upload";
+
+        // Replace with the path to the file you want to upload
+        String filePath = "/path/to/your/file.txt";
+
+        // Set up RestAssured base URI
+        RestAssured.baseURI = apiUrl;
+
+        // Perform the file upload
+        Response response = RestAssured.given()
+                .multiPart(new File(filePath))
+                .when()
+                .post();
+
+        // Print the response
+        System.out.println("Response Code: " + response.getStatusCode());
+        System.out.println("Response Body: " + response.getBody().asString());
+    }
+}
+```
+### :dart: Get an XML response using RestAssured
+```
+import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
+
+public class XmlResponseExample {
+
+    public static void main(String[] args) {
+        // Replace with your API endpoint
+        String apiUrl = "https://api.example.com/data";
+
+        // Set up RestAssured base URI
+        RestAssured.baseURI = apiUrl;
+
+        // Perform the GET request and expect XML response
+        Response response = RestAssured.given()
+                .header("Accept", ContentType.XML.getAcceptHeader())
+                .when()
+                .get();
+
+        // Print the XML response
+        System.out.println("Response Code: " + response.getStatusCode());
+        System.out.println("XML Response Body: " + response.getBody().asString());
+    }
+}
+```
+### :dart: RestAssured for a SOAP request
+[Click to view](https://www.abytjoseph.com/blog/testing-soap-webservices-using-rest-assured-library/#rest-assured-code-for-soap-call)
+```
+@Test
+public void postMethod() throws Exception {
+        FileInputStream fileInputStream = new FileInputStream(new File(".\\SOAPRequest\\SoapRequestFile.xml"));
+         RestAssured.baseURI="http://currencyconverter.kowabunga.net";
+         
+         Response response=given()
+                .header("Content-Type", "text/xml")
+                .and()
+                .body(IOUtils.toString(fileInputStream,"UTF-8"))
+         .when()
+            .post("/converter.asmx")
+         .then()
+                .statusCode(200)
+                .and()
+                .log().all()
+                .extract().response();
+         
+        XmlPath jsXpath= new XmlPath(response.asString());//Converting string into xml path to assert
+        String rate=jsXpath.getString("GetConversionRateResult");
+        System.out.println("rate returned is: " +  rate);
+```
